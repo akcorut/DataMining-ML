@@ -49,6 +49,9 @@ def go_ver_2(infile):
     data = pd.read_csv(path_to_data, converters={'local_eastern_time':crude_parse_datetime})
     
     data = data[data['StationID'] == 410]
+
+    #data[data['Local_eastern_time'] < pd.to_datetime("2018-01-01 23:45:00-0500")]
+
     data['day'] = data['local_eastern_time'].apply(lambda x: x.day)
     data['hour'] = data['local_eastern_time'].apply(lambda x: x.hour)
     data['minute'] = data['local_eastern_time'].apply(lambda x: x.minute)
