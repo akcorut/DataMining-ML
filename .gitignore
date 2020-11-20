@@ -137,3 +137,5 @@ dmypy.json
 JupyterNotebooks/**
 
 JupyterNotebooks/
+
+*.pdf
